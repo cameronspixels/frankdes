@@ -1,0 +1,69 @@
+.nav--primary {
+  
+}
+
+.nav--list {
+  width: 100%;
+  height: 0; opacity: 0; overflow: hidden;
+}
+
+.nav--item {
+  width: 100%;
+  transform: scaleY(0); transform-origin: top;
+  transition: transform 330ms;
+}
+
+.nav--link {
+  padding: 1.2rem 0; width: 100%; 
+  display: block;
+  color: white; font-weight: 400;
+  text-decoration: none; text-indent: 1.5rem;
+}
+
+.hamburger {
+  position: absolute;
+  top: 1rem; right: 1.5rem;
+}
+
+.hamburger--bar {
+  margin-bottom: 8px;
+  height: 7px; width: 50px;
+  display: block;
+  background: white;
+  border-radius: 6px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.hamburger--closed {
+  display: none;
+}
+
+#openNav:target {
+  .nav--list {
+    height: auto; opacity: 1; 
+  }
+  .nav--item {
+    transform: scaleY(1);
+    transition: transform 330ms;
+  }
+  .hamburger--open {
+    display: none;
+  }
+  .hamburger--closed {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .hamburger {
+    top: 1.5rem; right: 2rem;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .hamburger {
+    top: 1.5rem; right: 2.5rem;
+  }
+}
