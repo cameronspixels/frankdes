@@ -1,0 +1,62 @@
+.map {
+  margin: 0 auto;
+  width: 100%; height: 300px; max-width: 512px;
+  background: red;
+}
+
+label, input {
+  display: block;
+  width: 100%;
+}
+
+label {
+  margin-top: 1.4rem;
+  font-weight: 400;
+}
+
+input {
+  margin-top: .5rem; padding: .3rem 0 .5rem 0;
+  text-indent: .5rem;
+  background: none; color: white;
+  border: none; border-bottom: 2px solid white;
+  @include font-default;
+}
+
+.flex--wrap {
+  margin: 0 auto; display: block;
+  max-width: 512px;
+}
+
+.section--half {
+  margin: 2rem auto 0 auto;
+  width: 90%;
+}
+
+@media screen and (min-width: 1000px) {
+  .flex--section, .map {
+    max-width: 1000px;
+  }
+  .flex--wrap {
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+  }
+  .flex--right {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .section--half {
+    width: 50%;
+  }
+  fieldset {
+    margin-right: 4%;
+    width: 46%;
+    &.no--margin {
+      margin-right: 0;
+      width: 50%;
+    }
+    &.full--width {
+      margin-right: 0;
+      width: 100%;
+    }
+  }
+}

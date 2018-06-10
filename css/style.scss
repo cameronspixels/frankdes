@@ -5,12 +5,24 @@
 
 @import 'reset';
 
+@mixin font-default {
+  font-family: 'Lato', 'Helvetica Neue', 'Helvetica', 'Roboto', 'Arial', 'Ubuntu', sans-serif;
+  font-weight: 300; font-size: 100%;
+}
+
 body {
-  font-family: 'Lato', 'Helvetica Neue', 'Helvetica', 'Roboto', 'Arial', 'Ubuntu', sans-serif; font-weight: 300;
+  @include font-default;
+  background: var(--darkpurple); color: white;
+}
+
+main {
+  background: white; position: relative;
 }
 
 @import 'header';
 @import 'nav';
+
+// Hero banner on homepage
 
 .hero {
   height: 70vh; width: 100%;
@@ -21,7 +33,7 @@ body {
 }
 
 .hero--proj {
-  width: 140%; max-width: 600px;
+  width: 140%; max-width: 500px;
   position: absolute; top: 23vh; left: 50%; transform: translateX(-50%);
   z-index: 2;
 }
@@ -45,9 +57,10 @@ body {
   font-size: 1.1rem; text-align: center; text-decoration: none;
 }
 
+// Page section containers
 
-
-.flex--section {
+.page--section {
+  margin: 0 auto;
   padding: 2rem 0;
   max-width: 1000px;
 }
@@ -64,9 +77,50 @@ body {
   }
 }
 
+.subpage {
+  margin-top: 132px; padding-top: 2rem;
+  background: url(../assets/banner-background.jpg);
+  background-size: cover; background-position: center center;
+}
 
+.block {
+  margin: 0 auto 2rem auto; padding: 2rem 1rem; max-width: 450px;
+  background: rgba(255,255,255,.7); color: black; position: relative;
+  text-decoration: none;
+}
+
+.about--sidebar {
+  width: 20%;
+  position: absolute; top: 2rem; right: 2rem;
+  background: rgba(255,255,255,.6); color: black;
+}
+
+// Headings and text
+
+.main--heading { // H1
+  margin: 0 auto; padding: 2rem 0; max-width: 512px; 
+  font-size: 3rem; font-weight: 600; text-indent: 1rem;
+  background: rgba(13,13,13,.6);
+}
+
+.sub--heading { // H2
+  margin: 0 0 2rem 0;
+  font-size: 2rem; font-weight: 600;
+}
+
+.reg--text {
+  margin: 0 0 1rem 0;
+  line-height: 1.25; list-style-type: disc;
+  strong {
+    font-weight: 500;
+  }
+  li {
+    margin-left:  1rem;
+  }
+}
 
 @import 'footer';
+@import 'contact';
 
 @media screen and (min-width: 440px) {
   .hero {
@@ -78,14 +132,17 @@ body {
 }
 
 @media screen and (min-width: 540px) {
-  .hero--content {
-    top: 37vh;
-  }
   .hero--tag {
     font-size: 1.5rem;
   }
   .hero--cta {
     font-size: 1.2rem;
+  }
+  .subpage {
+    margin-top: 148px;
+  }
+  .block {
+    padding: 3rem 2rem;
   }
 }
 
@@ -97,7 +154,7 @@ body {
     font-size: 1.4rem;
   }
   .flex--section {
-    margin: 0 auto;    display: flex; 
+    display: flex;
   }
   .page--link {
     margin: 0 2rem 0 0;
@@ -105,5 +162,19 @@ body {
     &:last-child {
       margin: 0;
     }
+  }
+  .subpage {
+    margin-top: 156px;
+  }
+  .block {
+    margin: 0 2rem 0 0;
+    width: 33%;
+    &:last-child {
+      margin: 0;
+    }
+  }
+  .main--heading {
+    max-width: 1000px;
+    text-indent: 2rem;
   }
 }

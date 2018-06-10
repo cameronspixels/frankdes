@@ -3,21 +3,19 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <title>Frank Design</title>
+  <title>Contact - Frank Design</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,500,600" rel="stylesheet"> 
   <link href="css/style.css" rel="stylesheet" />
 </head>
 <body>
   <header class="header--primary" id="openNav">
-
     <!-- Logo with link -->
     <h1 class="logo">
       <a href="index.html" class="logo--link" title="Frank Deisgn homepage">
         <img src="assets/frank-design.png" alt="Frank Design Logo">
       </a>
     </h1>
-
     <!-- Nav with hamburger menu on mobile -->
     <nav class="nav--primary">
       <a href="#openNav" class="hamburger hamburger--open" title="Open menu">
@@ -31,33 +29,54 @@
         <span class="hamburger--bar"></span>
       </a>
       <ul class="nav--ul">
-        <li class="nav--li"><a href="index.html" class="nav--a active" title="Homepage">Home</a></li>
+        <li class="nav--li"><a href="index.html" class="nav--a" title="Homepage">Home</a></li>
         <li class="nav--li"><a href="about.html" class="nav--a" title="About page">About</a></li>
         <li class="nav--li"><a href="work.html" class="nav--a" title="Work page">Work</a></li>
-        <li class="nav--li"><a href="contact.html" class="nav--a" title="Contact page">Contact</a></li>
+        <li class="nav--li"><a href="contact.html" class="nav--a active" title="Contact page">Contact</a></li>
       </ul>
     </nav>
-
   </header>
   <main>
 
-    <!-- Hero banner and project link -->
-    <section class="hero">
-      <img class="hero--proj" src="assets/stjames-screenshot-imac.png" alt="St. James' Catholic High School project">
-      <div class="hero--content">
-        <p class="hero--tag">A high quality school that offers students a variety of beneficial opportunities, view the website that web built for St. James.</p>
-        <a href="#" class="hero--cta" title="St. James' project page">View project</a>
-      </div>
-    </section>
+    <section class="subpage">
 
-    <section class="page--section flex--section">
-      <a href="about.html" class="page--link" title="About page">About</a>
-      <a href="work.html" class="page--link" title="Work page">Work</a>
-      <a href="contact.html" class="page--link" title="Contact page">Contact</a>
-    </section>
+      <h1 class="main--heading">Contact</h1>
+
+      <div class="page--section">
+        <section class="map" id="googleMap"></section>
+        <section class="flex--section flex--wrap">
+
+          <form class="section--half flex--right">
+            <fieldset>
+              <label for="name">Your Name</label>
+              <input name="name" id="name" type="text" required>
+            </fieldset>
+            <fieldset class="no--margin">
+              <label for="email">Email Address</label>
+              <input name="email" id="email" type="email" required>
+            </fieldset>
+            <fieldset>
+              <label for="tel">Telephone No.</label>
+              <input name="tel" id="tel" type="tel" required>
+            </fieldset>
+            <fieldset class="no--margin">
+              <label for="subject">Subject</label>
+              <input name="subject" id="subject" type="text">
+            </fieldset>
+            <fieldset class="full--width">
+              <label for="msg">Your Message</label>
+              <input name="msg" id="msg" type="text" required>
+            </fieldset>
+          </form>
     
 
+          <div class="section--half flex--left">
 
+          </div>
+
+      </section>
+      
+    </div>
 
 
   </main>
@@ -82,7 +101,6 @@
       <p class="footer--text">E-mail: <a href="mailto:info@frankdesignltd.co.uk" class="footer--link" title="Email Frank Design">info@frankdesignltd.co.uk</a></p>
     </div>
   </footer>
-  <script src="map.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCl02x0VRS1eJjluaJElyitZEjAHGCZ5Qs&callback=myMap"></script>
+
 </body>
 </html>
