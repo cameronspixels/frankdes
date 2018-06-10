@@ -9,8 +9,19 @@
   line-height: 1.25;
 }
 
+.footer--social {
+  margin-bottom: 2rem; position: relative; display: block; width: 100%; height: 35px;
+  img {
+    height: 35px;
+  }
+}
+
 .footer--link {
-  color: white; text-decoration: none;
+  color: white; text-decoration: underline;
+}
+
+.vertical--align {
+  padding-left: .5rem; position: absolute; top: 50%; transform: translateY(-50%);
 }
 
 
@@ -25,12 +36,14 @@
   .flex--right {
     width: 40%;
   }
+  .footer--social {
+    margin-bottom: 1rem;
+  }
 }
 
 @media screen and (min-width: 800px) {
   .footer--primary {
     padding: 3rem 15%;
-    display: flex; flex-direction: row-reverse;
   }
   .flex--left {
     width: 60%;

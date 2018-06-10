@@ -1,23 +1,25 @@
-<html>
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <title>Frank Design</title>
+<!-- Hello! I ran a little shorter on time that I would've linked and the styling's a little off as such; widths, paddings, hover states and such aren't all there. My apologies! -->
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Frank Design</title>
+  <meta name="description" content=" ">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet"> 
-  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
   <header class="header--primary" id="openNav">
-
-    <!-- Logo with link -->
+    <!-- Logo with link.
+    The H1 should definately say Frank Design, but I'm yet to figure out a good way to put the website name inside a logo H1 -->
     <h1 class="logo">
       <a href="index.html" class="logo--link" title="Frank Deisgn homepage">
         <img src="assets/frank-design.png" alt="Frank Design Logo">
       </a>
     </h1>
-
     <!-- Nav with hamburger menu on mobile -->
     <nav class="nav--primary">
       <a href="#openNav" class="hamburger hamburger--open" title="Open menu">
@@ -37,38 +39,33 @@
         <li class="nav--li"><a href="contact.html" class="nav--a" title="Contact page">Contact</a></li>
       </ul>
     </nav>
-
   </header>
   <main>
-
     <!-- Hero banner and project link -->
-    <section class="hero">
+    <div class="hero">
       <img class="hero--proj" src="assets/stjames-screenshot-imac.png" alt="St. James' Catholic High School project">
       <div class="hero--content">
         <p class="hero--tag">A high quality school that offers students a variety of beneficial opportunities, view the website that web built for St. James.</p>
         <a href="#" class="hero--cta" title="St. James' project page">View project</a>
       </div>
-    </section>
-
-    <section class="page--section flex--section">
+    </div>
+    <!-- Page links -->
+    <div class="page--section flex--section">
       <a href="about.html" class="page--link" title="About page">About</a>
       <a href="work.html" class="page--link" title="Work page">Work</a>
       <a href="contact.html" class="page--link" title="Contact page">Contact</a>
-    </section>
-    
-
-
-
-
+    </div>
   </main>
-
-
   <footer class="footer--primary">
     <!-- Social links, top of footer on mobile, right side on desktop -->
     <ul class="flex--right">
       <li class="footer--social">
-        <img src="assets/twitter-icon.png" alt="Facebook Icon">
-        <a class="footer--link" href="#" title="Frank Design Facebook page">Facebook: /FrankDesignLtd</a>
+        <img src="assets/facebook-icon.png" alt="Facebook Icon">
+        <a class="footer--link vertical--align" href="https://www.facebook.com/frankdesignltd" title="Frank Design Facebook page">Facebook: /FrankDesignLtd</a>
+      </li>
+      <li class="footer--social">
+        <img src="assets/twitter-icon.png" alt="Twitter Icon">
+        <a class="footer--link vertical--align" href="https://twitter.com/frankdesignltd/" title="Frank Design Twitter page">Facebook: /FrankDesignLtd</a>
       </li>
     </ul>
     <!-- Contact details, bottom of footer on mobile, left side on desktop -->
@@ -78,11 +75,9 @@
         <br>Charlton Place,
         <br>Manchester,
         <br>M12 6HS</p>
-      <p class="footer--text">Tel: 0161 273 53 54</p>
+      <p class="footer--text">Tel: <a href="tel:+441612735453" title="Phone Frank Design" class="footer--link">0161 273 53 54</a></p>
       <p class="footer--text">E-mail: <a href="mailto:info@frankdesignltd.co.uk" class="footer--link" title="Email Frank Design">info@frankdesignltd.co.uk</a></p>
     </div>
   </footer>
-  <script src="map.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCl02x0VRS1eJjluaJElyitZEjAHGCZ5Qs&callback=myMap"></script>
 </body>
 </html>

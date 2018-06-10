@@ -1,7 +1,6 @@
-.map {
+#googleMap {
   margin: 0 auto;
   width: 100%; height: 300px; max-width: 512px;
-  background: red;
 }
 
 label, input {
@@ -14,12 +13,16 @@ label {
   font-weight: 400;
 }
 
-input {
+input, textarea {
   margin-top: .5rem; padding: .3rem 0 .5rem 0;
-  text-indent: .5rem;
+  text-indent: .2rem;
   background: none; color: white;
   border: none; border-bottom: 2px solid white;
   @include font-default;
+}
+
+textarea {
+  width: 100%;
 }
 
 .flex--wrap {
@@ -32,8 +35,20 @@ input {
   width: 90%;
 }
 
-@media screen and (min-width: 1000px) {
-  .flex--section, .map {
+.form--btn {
+  margin-top: 2rem; padding: .5rem 3rem;
+  background: white; border: none;
+  @include font-default; font-weight: 500;
+  transition: background 330ms;
+  &:hover {
+    background: purple;
+    transition: background 330ms;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .flex--section, #googleMap {
     max-width: 1000px;
   }
   .flex--wrap {
@@ -58,5 +73,14 @@ input {
       margin-right: 0;
       width: 100%;
     }
+  }
+}
+
+@media screen and (min-width: 1660px) {
+  .flex--section, #googleMap {
+    max-width: 1240px;
+  }
+  .section--half {
+    margin-top: 3rem;
   }
 }

@@ -41,7 +41,11 @@ body {
 
 main {
   background: white;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
+
+a {
+  color: inherit; }
 
 .header--primary {
   width: 100%;
@@ -57,10 +61,10 @@ main {
     width: 40%;
     max-width: 100px; }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 540px) {
   .logo {
     margin: 1.5rem 0 1.5rem 3%; } }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 960px) {
   .logo {
     margin: 1.5rem 0 1.5rem 15%; } }
 .nav--ul {
@@ -117,11 +121,11 @@ main {
 #openNav:target .hamburger--closed {
   display: block; }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 540px) {
   .hamburger {
     top: 3rem;
     right: 3%; } }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 960px) {
   .hamburger {
     display: none; }
 
@@ -220,7 +224,7 @@ main {
     margin: 0; }
 
 .subpage {
-  margin-top: 132px;
+  margin-top: 138px;
   padding-top: 2rem;
   background: url(../assets/banner-background.jpg);
   background-size: cover;
@@ -235,15 +239,32 @@ main {
   position: relative;
   text-decoration: none; }
 
-.about--sidebar {
-  width: 20%;
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  background: rgba(255, 255, 255, 0.6);
-  color: black; }
+.sidebar {
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  width: 100%;
+  background: var(--darkpurple); }
 
-.main--heading {
+.sidebar--link, .sidebar--txtlink {
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  max-width: 450px; }
+
+.sidebar--heading {
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  max-width: 450px; }
+
+.sidebar--img {
+  height: 50px; }
+
+.sidebar--txtlink {
+  font-size: 1.2rem;
+  font-weight: 500; }
+
+.h1 {
   margin: 0 auto;
   padding: 2rem 0;
   max-width: 512px;
@@ -252,8 +273,8 @@ main {
   text-indent: 1rem;
   background: rgba(13, 13, 13, 0.6); }
 
-.sub--heading {
-  margin: 0 0 2rem 0;
+.h2 {
+  margin: 0 0 1.5rem 0;
   font-size: 2rem;
   font-weight: 600; }
 
@@ -266,6 +287,10 @@ main {
   .reg--text li {
     margin-left: 1rem; }
 
+.work--logo {
+  margin-top: 1rem;
+  max-width: 100%; }
+
 .footer--primary {
   padding: 2rem 1rem;
   background: var(--darkpurple);
@@ -276,9 +301,24 @@ main {
   margin-bottom: 1rem;
   line-height: 1.25; }
 
+.footer--social {
+  margin-bottom: 2rem;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 35px; }
+  .footer--social img {
+    height: 35px; }
+
 .footer--link {
   color: white;
-  text-decoration: none; }
+  text-decoration: underline; }
+
+.vertical--align {
+  padding-left: .5rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); }
 
 @media screen and (min-width: 640px) {
   .footer--primary {
@@ -290,12 +330,13 @@ main {
     width: 60%; }
 
   .flex--right {
-    width: 40%; } }
+    width: 40%; }
+
+  .footer--social {
+    margin-bottom: 1rem; } }
 @media screen and (min-width: 800px) {
   .footer--primary {
-    padding: 3rem 15%;
-    display: flex;
-    flex-direction: row-reverse; }
+    padding: 3rem 15%; }
 
   .flex--left {
     width: 60%; }
@@ -308,12 +349,11 @@ main {
 
   .flex--right {
     width: 35%; } }
-.map {
+#googleMap {
   margin: 0 auto;
   width: 100%;
   height: 300px;
-  max-width: 512px;
-  background: red; }
+  max-width: 512px; }
 
 label, input {
   display: block;
@@ -323,10 +363,10 @@ label {
   margin-top: 1.4rem;
   font-weight: 400; }
 
-input {
+input, textarea {
   margin-top: .5rem;
   padding: .3rem 0 .5rem 0;
-  text-indent: .5rem;
+  text-indent: .2rem;
   background: none;
   color: white;
   border: none;
@@ -334,6 +374,9 @@ input {
   font-family: 'Lato', 'Helvetica Neue', 'Helvetica', 'Roboto', 'Arial', 'Ubuntu', sans-serif;
   font-weight: 300;
   font-size: 100%; }
+
+textarea {
+  width: 100%; }
 
 .flex--wrap {
   margin: 0 auto;
@@ -344,8 +387,23 @@ input {
   margin: 2rem auto 0 auto;
   width: 90%; }
 
-@media screen and (min-width: 1000px) {
-  .flex--section, .map {
+.form--btn {
+  margin-top: 2rem;
+  padding: .5rem 3rem;
+  background: white;
+  border: none;
+  font-family: 'Lato', 'Helvetica Neue', 'Helvetica', 'Roboto', 'Arial', 'Ubuntu', sans-serif;
+  font-weight: 300;
+  font-size: 100%;
+  font-weight: 500;
+  transition: background 330ms; }
+  .form--btn:hover {
+    background: purple;
+    transition: background 330ms;
+    cursor: pointer; }
+
+@media screen and (min-width: 960px) {
+  .flex--section, #googleMap {
     max-width: 1000px; }
 
   .flex--wrap {
@@ -368,6 +426,12 @@ input {
     fieldset.full--width {
       margin-right: 0;
       width: 100%; } }
+@media screen and (min-width: 1660px) {
+  .flex--section, #googleMap {
+    max-width: 1240px; }
+
+  .section--half {
+    margin-top: 3rem; } }
 @media screen and (min-width: 440px) {
   .hero {
     height: 75vh; }
@@ -382,11 +446,11 @@ input {
     font-size: 1.2rem; }
 
   .subpage {
-    margin-top: 148px; }
+    margin-top: 154px; }
 
   .block {
     padding: 3rem 2rem; } }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 960px) {
   .hero--tag {
     font-size: 2rem; }
 
@@ -403,7 +467,7 @@ input {
       margin: 0; }
 
   .subpage {
-    margin-top: 156px; }
+    margin-top: 150px; }
 
   .block {
     margin: 0 2rem 0 0;
@@ -411,8 +475,45 @@ input {
     .block:last-child {
       margin: 0; }
 
-  .main--heading {
+  .h1 {
     max-width: 1000px;
     text-indent: 2rem; } }
+@media screen and (min-width: 1220px) {
+  .sidebar {
+    width: 15%;
+    position: absolute;
+    top: calc(150px + 2rem);
+    right: 0; }
+
+  .about--page {
+    margin: 0 auto 0 0; } }
+@media screen and (min-width: 1660px) {
+  .hero--proj {
+    max-width: 700px;
+    top: 20vh; }
+
+  .hero--tag {
+    padding: 2rem;
+    max-width: 900px; }
+
+  .hero--cta {
+    padding: 1.5rem 0;
+    width: 240px; }
+
+  .subpage {
+    padding-top: 3rem; }
+
+  .page--section {
+    padding: 3rem 0;
+    max-width: 1240px; }
+
+  .h1 {
+    max-width: 1240px; }
+
+  .sidebar {
+    top: calc(150px + 3rem); }
+
+  .about--page {
+    margin: 0 auto 0 3rem; } }
 
 /*# sourceMappingURL=style.css.map */

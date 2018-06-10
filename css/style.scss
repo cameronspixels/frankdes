@@ -16,7 +16,11 @@ body {
 }
 
 main {
-  background: white; position: relative;
+  background: white; position: relative; overflow: hidden;
+}
+
+a {
+  color: inherit;
 }
 
 @import 'header';
@@ -78,7 +82,7 @@ main {
 }
 
 .subpage {
-  margin-top: 132px; padding-top: 2rem;
+  margin-top: 138px; padding-top: 2rem;
   background: url(../assets/banner-background.jpg);
   background-size: cover; background-position: center center;
 }
@@ -89,22 +93,43 @@ main {
   text-decoration: none;
 }
 
-.about--sidebar {
-  width: 20%;
-  position: absolute; top: 2rem; right: 2rem;
-  background: rgba(255,255,255,.6); color: black;
+.sidebar {
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  width: 100%;
+  background: var(--darkpurple);
+}
+
+.sidebar--link, .sidebar--txtlink {
+  margin: 0 auto;
+  display: block;
+  width: 100%; max-width: 450px;
+}
+
+.sidebar--heading {
+  margin: 0 auto;
+  display: block;
+  width: 100%; max-width: 450px;
+}
+
+.sidebar--img {
+  height: 50px;
+}
+
+.sidebar--txtlink {
+  font-size: 1.2rem; font-weight: 500;
 }
 
 // Headings and text
 
-.main--heading { // H1
+.h1 { // H1
   margin: 0 auto; padding: 2rem 0; max-width: 512px; 
   font-size: 3rem; font-weight: 600; text-indent: 1rem;
   background: rgba(13,13,13,.6);
 }
 
-.sub--heading { // H2
-  margin: 0 0 2rem 0;
+.h2 { // H2
+  margin: 0 0 1.5rem 0;
   font-size: 2rem; font-weight: 600;
 }
 
@@ -119,8 +144,15 @@ main {
   }
 }
 
+.work--logo {
+  margin-top: 1rem;
+  max-width: 100%;
+}
+
 @import 'footer';
 @import 'contact';
+
+// Mobile step 1
 
 @media screen and (min-width: 440px) {
   .hero {
@@ -131,6 +163,8 @@ main {
   }
 }
 
+// Mobile step 2 & Tablet
+
 @media screen and (min-width: 540px) {
   .hero--tag {
     font-size: 1.5rem;
@@ -139,14 +173,16 @@ main {
     font-size: 1.2rem;
   }
   .subpage {
-    margin-top: 148px;
+    margin-top: 154px;
   }
   .block {
     padding: 3rem 2rem;
   }
 }
 
-@media screen and (min-width: 800px) {
+// Desktop
+
+@media screen and (min-width: 960px) {
   .hero--tag {
     font-size: 2rem;
   }
@@ -164,7 +200,7 @@ main {
     }
   }
   .subpage {
-    margin-top: 156px;
+    margin-top: 150px;
   }
   .block {
     margin: 0 2rem 0 0;
@@ -173,8 +209,53 @@ main {
       margin: 0;
     }
   }
-  .main--heading {
+  .h1 {
     max-width: 1000px;
     text-indent: 2rem;
+  }
+}
+
+// Sidebar only goes to the side when it fits
+
+@media screen and (min-width: 1220px) {
+  .sidebar {
+    width: 15%;
+    position: absolute; top: calc(150px + 2rem); right: 0;
+  }
+  .about--page {
+    margin: 0 auto 0 0;
+  }
+}
+
+// In the case of televisions
+
+@media screen and (min-width: 1660px) {
+  .hero--proj {
+    max-width: 700px;
+    top: 20vh;
+  }
+  .hero--tag {
+    padding: 2rem;
+    max-width: 900px;
+  }
+  .hero--cta {
+    padding: 1.5rem 0;
+    width: 240px;
+  }
+  .subpage {
+    padding-top: 3rem;
+  }
+  .page--section {
+    padding: 3rem 0;
+    max-width: 1240px;
+  }
+  .h1 {
+    max-width: 1240px;
+  }
+  .sidebar {
+    top: calc(150px + 3rem);
+  }
+  .about--page {
+    margin: 0 auto 0 3rem;
   }
 }

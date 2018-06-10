@@ -1,21 +1,24 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Contact - Frank Design</title>
-
+  <meta name="description" content=" ">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,500,600" rel="stylesheet"> 
-  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet">
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCl02x0VRS1eJjluaJElyitZEjAHGCZ5Qs&callback=myMap" defer async></script>
+  <script src="map.js" defer async></script>
 </head>
 <body>
   <header class="header--primary" id="openNav">
     <!-- Logo with link -->
-    <h1 class="logo">
+    <div class="logo">
       <a href="index.html" class="logo--link" title="Frank Deisgn homepage">
         <img src="assets/frank-design.png" alt="Frank Design Logo">
       </a>
-    </h1>
+    </div>
     <!-- Nav with hamburger menu on mobile -->
     <nav class="nav--primary">
       <a href="#openNav" class="hamburger hamburger--open" title="Open menu">
@@ -37,57 +40,67 @@
     </nav>
   </header>
   <main>
-
-    <section class="subpage">
-
-      <h1 class="main--heading">Contact</h1>
-
+    <div class="subpage">
+      <h1 class="h1">Contact</h1>
       <div class="page--section">
-        <section class="map" id="googleMap"></section>
+        <div id="googleMap"></div>
         <section class="flex--section flex--wrap">
-
-          <form class="section--half flex--right">
+          <form class="section--half flex--right" id="contact">
             <fieldset>
               <label for="name">Your Name</label>
-              <input name="name" id="name" type="text" required>
+              <input name="name" id="name" type="text" placeholder="Your name..." required>
             </fieldset>
             <fieldset class="no--margin">
               <label for="email">Email Address</label>
-              <input name="email" id="email" type="email" required>
+              <input name="email" id="email" type="email" placeholder="Your email address..." required>
             </fieldset>
             <fieldset>
               <label for="tel">Telephone No.</label>
-              <input name="tel" id="tel" type="tel" required>
+              <input name="tel" id="tel" type="tel" placeholder="123 456 789 101" required>
             </fieldset>
             <fieldset class="no--margin">
               <label for="subject">Subject</label>
-              <input name="subject" id="subject" type="text">
+              <input name="subject" id="subject" placeholder="Message subject..." type="text">
             </fieldset>
             <fieldset class="full--width">
               <label for="msg">Your Message</label>
-              <input name="msg" id="msg" type="text" required>
+              <textarea name="msg" id="msg" type="text" placeholder="Your message..." required></textarea>
             </fieldset>
+            <button class="form--btn" form="contact">Send</button>
           </form>
-    
-
           <div class="section--half flex--left">
-
+            <h2 class="h2">Get in Touch</h2>
+            <!-- Address -->
+            <p class="reg--text"><strong>Address:</strong>
+              <br>Frank Design Ltd,
+              <br>2nd Floor, The Mews,
+              <br>Charlton Place,
+              <br>Manchester,
+              <br>M12 6HS
+            </p>
+            <!-- Email -->
+            <p class="reg--text"><strong>Email:</strong>
+              <br><a href="mailto:info@frankdesignltd.com" title="Email Frank Design">info@frankdesignltd.com</a>
+            </p>
+            <!-- Email -->
+            <p class="reg--text"><strong>Telephone:</strong>
+              <br><a href="tel:+441612375354" title="Email Frank Design">0161 273 5354</a>
+            </p>
           </div>
-
-      </section>
-      
+        </section>
+      </div>
     </div>
-
-
   </main>
-
-
   <footer class="footer--primary">
     <!-- Social links, top of footer on mobile, right side on desktop -->
     <ul class="flex--right">
       <li class="footer--social">
-        <img src="assets/twitter-icon.png" alt="Facebook Icon">
-        <a class="footer--link" href="#" title="Frank Design Facebook page">Facebook: /FrankDesignLtd</a>
+        <img src="assets/facebook-icon.png" alt="Facebook Icon">
+        <a class="footer--link vertical--align" href="https://www.facebook.com/frankdesignltd" title="Frank Design Facebook page">Facebook: /FrankDesignLtd</a>
+      </li>
+      <li class="footer--social">
+        <img src="assets/twitter-icon.png" alt="Twitter Icon">
+        <a class="footer--link vertical--align" href="https://twitter.com/frankdesignltd/" title="Frank Design Twitter page">Facebook: /FrankDesignLtd</a>
       </li>
     </ul>
     <!-- Contact details, bottom of footer on mobile, left side on desktop -->
@@ -97,10 +110,9 @@
         <br>Charlton Place,
         <br>Manchester,
         <br>M12 6HS</p>
-      <p class="footer--text">Tel: 0161 273 53 54</p>
+      <p class="footer--text">Tel: <a href="tel:+441612735453" title="Phone Frank Design" class="footer--link">0161 273 53 54</a></p>
       <p class="footer--text">E-mail: <a href="mailto:info@frankdesignltd.co.uk" class="footer--link" title="Email Frank Design">info@frankdesignltd.co.uk</a></p>
     </div>
   </footer>
-
 </body>
 </html>

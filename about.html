@@ -1,21 +1,22 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>About - Frank Design</title>
-
+  <meta name="description" content=" ">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,500,600" rel="stylesheet"> 
-  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
   <header class="header--primary" id="openNav">
     <!-- Logo with link -->
-    <h1 class="logo">
+    <div class="logo">
       <a href="index.html" class="logo--link" title="Frank Deisgn homepage">
         <img src="assets/frank-design.png" alt="Frank Design Logo">
       </a>
-    </h1>
+    </div>
     <!-- Nav with hamburger menu on mobile -->
     <nav class="nav--primary">
       <a href="#openNav" class="hamburger hamburger--open" title="Open menu">
@@ -37,21 +38,16 @@
     </nav>
   </header>
   <main>
-
-
     <div class="subpage">
-
-      <h1 class="main--heading">About</h1>
-
-      <section class="page--section flex--section about">
+      <h1 class="h1 about--page">About</h1>
+      <div class="page--section flex--section about--page">
         <div class="block">
-          <h2 class="sub--heading">Creative and process-driven</h2>
+          <p class="h2">Creative and process-driven</p>
           <p class="reg--text"><strong>Frank Design use online project management tools</strong> that enable clients to devote less time to projects and whilst keeping up to date with progress 24/7.</p>
           <p class="reg--text">The processes and controls that we employ ensure that projects are delivered on time, of the required quality criteria and on budget.</p>
         </div>
-  
         <div class="block">
-          <h2 class="sub--heading">More than the bottom line</h2>
+          <p class="h2">More than the bottom line</p>
           <p class="reg--text">Frank design recognises the benefits of an active corporate and social responsibility policy and is committed to three Frank pledges:</p>
           <ul class="reg--text">
             <li>Supporting the greater environmental impact of greater Manchester.</li>
@@ -60,31 +56,38 @@
           </ul>
         </div>    
         <div class="block">
-          <h2 class="sub--heading">We're a great team to work with</h2>
+          <p class="h2">We're a great team to work with</p>
           <p class="reg--text"><strong>To ensure that we're meeting our customers' expectations</strong>, Frank Design request that a survey is compeleted, or at least some form of constructive feedback is received, at the end of each project.</p>
         </div>   
-      </section>
-      
+      </div>
     </div>
-
-    <aside class="about--sidebar">
-      <h2>Recent Projects</h2>
-    
-
+    <aside class="sidebar">
+      <h2 class="h2 sidebar--heading">Recent Projects</h2>
+      <a class="sidebar--link" href="work.html" title="Aspire Data Recruitment project">
+        <img class="sidebar--img" src="assets/aspire.png" alt="Aspire Data Recruitment logo">
+        <p class="reg--text">Aspire Data Recruitment</p>
+      </a>
+      <a class="sidebar--link" href="work.html" title="Healthier Together project">
+        <img class="sidebar--img" src="assets/healthier_together.png" alt="Healthier Together  logo">
+        <p class="reg--text">Heathier Together</p>
+      </a>
+      <a class="sidebar--link" href="work.html" title="St James Catholic High School project">
+        <img class="sidebar--img" src="assets/stjames.png" alt="St James logo">
+        <p class="reg--text">St James Catholic High School</p>
+      </a>
+      <a class="sidebar--txtlink" href="work.html" title="Our Work page">See Our Work page</a>
     </aside>
-
-
-
-
   </main>
-
-
   <footer class="footer--primary">
     <!-- Social links, top of footer on mobile, right side on desktop -->
     <ul class="flex--right">
       <li class="footer--social">
-        <img src="assets/twitter-icon.png" alt="Facebook Icon">
-        <a class="footer--link" href="#" title="Frank Design Facebook page">Facebook: /FrankDesignLtd</a>
+        <img src="assets/facebook-icon.png" alt="Facebook Icon">
+        <a class="footer--link vertical--align" href="https://www.facebook.com/frankdesignltd" title="Frank Design Facebook page">Facebook: /FrankDesignLtd</a>
+      </li>
+      <li class="footer--social">
+        <img src="assets/twitter-icon.png" alt="Twitter Icon">
+        <a class="footer--link vertical--align" href="https://twitter.com/frankdesignltd/" title="Frank Design Twitter page">Facebook: /FrankDesignLtd</a>
       </li>
     </ul>
     <!-- Contact details, bottom of footer on mobile, left side on desktop -->
@@ -94,10 +97,9 @@
         <br>Charlton Place,
         <br>Manchester,
         <br>M12 6HS</p>
-      <p class="footer--text">Tel: 0161 273 53 54</p>
+      <p class="footer--text">Tel: <a href="tel:+441612735453" title="Phone Frank Design" class="footer--link">0161 273 53 54</a></p>
       <p class="footer--text">E-mail: <a href="mailto:info@frankdesignltd.co.uk" class="footer--link" title="Email Frank Design">info@frankdesignltd.co.uk</a></p>
     </div>
   </footer>
-
 </body>
 </html>
